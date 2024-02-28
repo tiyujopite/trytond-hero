@@ -19,4 +19,8 @@ class Hero(avatar_mixin(250), ModelSQL, ModelView):
     @classmethod
     @ModelView.button
     def search_avatar(cls, heroes):
-        pass
+        path = '/home/jadiaz/code/demo/etc/images/%s.png'
+        for hero in heroes:
+            with open(path % hero.name.lower(), 'rb') as img:
+                hero.avatar = img.read()
+        cls.save(heroes)
