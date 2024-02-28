@@ -1,0 +1,9 @@
+<form col="5">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="party"/>
+    <field name="party"/>
+    <field name="avatar" widget="image" height="250" width="250" xexpand="0"/>
+    <label name="tagline"/>
+    <field name="tagline" colspan="5"/>
+</form>
