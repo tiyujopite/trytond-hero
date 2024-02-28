@@ -30,5 +30,11 @@
             sequence="10"
             action="act_hero_form"
             id="menu_hero"/>
+
+        <record model="ir.model.button" id="hero_search_avatar_button">
+            <field name="name">search_avatar</field>
+            <field name="string">Search avatar</field>
+            <field name="model" search="[('model', '=', 'hero')]"/>
+        </record>
     </data>
 </tryton>

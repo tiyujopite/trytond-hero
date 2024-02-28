@@ -6,4 +6,7 @@
     <field name="avatar" widget="image" height="250" width="250" xexpand="0"/>
     <label name="tagline"/>
     <field name="tagline" colspan="5"/>
+    <group colspan="5" id="group_buttons">
+        <button name="search_avatar" icon="tryton-search"/>
+    </group>
 </form>

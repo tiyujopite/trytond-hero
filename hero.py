@@ -8,3 +8,15 @@ class Hero(avatar_mixin(250), ModelSQL, ModelView):
     name = fields.Char("Name", required=True)
     party = fields.Many2One('party.party', "Party", required=True)
     tagline = fields.Text("Tagline")
+
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._buttons.update({
+                'search_avatar': {}
+                })
+
+    @classmethod
+    @ModelView.button
+    def search_avatar(cls, heroes):
+        pass
